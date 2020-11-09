@@ -41,7 +41,7 @@ def _get_bert_vectors(weight_path, label_path, txt2idx, layers=1):
     
     return embedding_dict
 
-def map_metis(input_data, target_data, input_bert_weights, target_bert_weights, string_match='edit', alpha=0.8, bert_layers=1, top_n=5):
+def map_marie(input_data, target_data, input_bert_weights, target_bert_weights, string_match='edit', alpha=0.8, bert_layers=1, top_n=5):
     inp_txt2idx, inp_idx2txt=_create_txt2idx(input_data)
     tgt_txt2idx, tgt_idx2txt=_create_txt2idx(target_data)
 
