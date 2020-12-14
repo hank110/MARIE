@@ -4,5 +4,9 @@
 - Compared to previous term mapping methods, our proposed method shows improved mapping accuracy. 
 - Furthermore, as a general mapping method, it can be easily expanded to incorporate any string matching or term embedding methods.
 
+### Warning
+- This project does not provide BioBERT weights
+- Please refer to https://github.com/dmis-lab/biobert and download BioBERT weights to save term embedding vectors as jsonl file
+
 ## Funding
 - This research was supported by a grant of the Korea Health Technology R&D Project through the Korea Health Industry Development Institute (KHIDI), funded by the Ministry of Health & Welfare, South Korea (grant number: HI19C0572)
