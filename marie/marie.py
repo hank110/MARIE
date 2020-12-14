@@ -9,7 +9,7 @@ def _create_txt2idx(file_path):
     idx2txt=dict()
     idx=0
     
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
             idx2txt[idx]=line.rstrip()
             idx+=1
@@ -35,7 +35,7 @@ def _cal_phrase_vector(json_entry, layers=1):
 def _get_bert_vectors(weight_path, label_path, txt2idx, layers=1):
     embedding_dict=dict()
 
-    with open(weight_path, 'r') as f1, open(label_path, 'r') as f2:
+    with open(weight_path, 'r', encoding='utf-8') as f1, open(label_path, 'r', encoding='utf-8') as f2:
         for line1,line2 in zip(f1, f2):
             embedding_dict[txt2idx[line2.rstrip()]]=_cal_phrase_vector(json.loads(line1), layers)
     
